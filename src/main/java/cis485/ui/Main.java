@@ -1,5 +1,6 @@
 package cis485.ui;
 
+import cis485.ui.Panels.*;
 import com.github.bhlangonijr.chesslib.Board;
 
 import javax.imageio.ImageIO;
@@ -21,6 +22,9 @@ public class Main {
         loadImages(boardView);
 
         NorthPanel northPanel = new NorthPanel();
+        SouthPanel southPanel = new SouthPanel();
+        EastPanel eastPanel = new EastPanel();
+        WestPanel westPanel = new WestPanel();
 
 
         JFrame frame = new JFrame("Chess Engine UI");
@@ -29,6 +33,9 @@ public class Main {
         frame.setLayout(new BorderLayout());
         frame.add(boardView, BorderLayout.CENTER);
         frame.add(northPanel, BorderLayout.NORTH);
+        frame.add(southPanel, BorderLayout.SOUTH);
+        frame.add(eastPanel, BorderLayout.EAST);
+        frame.add(westPanel, BorderLayout.WEST);
         frame.setVisible(true);
     }
 

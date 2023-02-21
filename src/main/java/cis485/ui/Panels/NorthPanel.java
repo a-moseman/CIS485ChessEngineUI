@@ -1,4 +1,4 @@
-package cis485.ui;
+package cis485.ui.Panels;
 
 import javax.swing.*;
 

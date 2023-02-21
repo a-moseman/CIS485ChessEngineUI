@@ -1,4 +1,4 @@
-package cis485.ui;
+package cis485.ui.Panels;
 
 import com.github.bhlangonijr.chesslib.Board;
 import com.github.bhlangonijr.chesslib.Piece;
