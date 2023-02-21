@@ -13,7 +13,7 @@ public class BoardView extends JPanel {
     private BufferedImage boardImage;
     private HashMap<String, BufferedImage> pieceImages;
 
-    private int SQUARE_PIXEL_SIZE = 60; // todo: determine
+    private int SQUARE_PIXEL_SIZE = 60;
     private Board board;
 
     public BoardView(Board board) {

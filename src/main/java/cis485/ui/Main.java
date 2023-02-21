@@ -13,8 +13,8 @@ import java.io.IOException;
 public class Main {
     private static final String BOARD_IMAGE_PATH = "Images\\board.png";
     private static final String PIECE_IMAGE_DIRECTORY_PATH = "Images\\Pieces";
-    private static final int PIXEL_WIDTH = 600;
-    private static final int PIXEL_HEIGHT = 600;
+    private static final int PIXEL_WIDTH = 800;
+    private static final int PIXEL_HEIGHT = 800;
 
     public static void main(String[] args) {
         Board board = new Board();
@@ -22,7 +22,7 @@ public class Main {
         loadImages(boardView);
 
         NorthPanel northPanel = new NorthPanel();
-        SouthPanel southPanel = new SouthPanel();
+        SouthPanel southPanel = new SouthPanel(board);
         EastPanel eastPanel = new EastPanel();
         WestPanel westPanel = new WestPanel();
 
