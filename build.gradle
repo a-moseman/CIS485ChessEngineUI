@@ -1,9 +1,16 @@
 plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'java'
 }
 
 group 'cis485.ui'
 version '1.0-SNAPSHOT'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'cis485.ui.Main'
+    }
+}
 
 repositories {
     mavenCentral()

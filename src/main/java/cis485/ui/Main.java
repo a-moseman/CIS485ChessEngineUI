@@ -10,8 +10,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Main {
-    private static final String BOARD_IMAGE_PATH = "C:\\Users\\drewm\\OneDrive\\Desktop\\ChessEngineUI\\Images\\board.png"; // todo
-    private static final String PIECE_IMAGE_DIRECTORY_PATH = "C:\\Users\\drewm\\OneDrive\\Desktop\\ChessEngineUI\\Images\\Pieces"; // todo
+    private static final String BOARD_IMAGE_PATH = "Images\\board.png";
+    private static final String PIECE_IMAGE_DIRECTORY_PATH = "Images\\Pieces";
     private static final int PIXEL_WIDTH = 600;
     private static final int PIXEL_HEIGHT = 600;
 
