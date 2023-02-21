@@ -2,7 +2,6 @@ package cis485.ui;
 
 import com.github.bhlangonijr.chesslib.Board;
 import com.github.bhlangonijr.chesslib.Piece;
-import com.github.bhlangonijr.chesslib.Side;
 import com.github.bhlangonijr.chesslib.Square;
 
 import javax.swing.*;
@@ -14,7 +13,7 @@ public class BoardView extends JPanel {
     private BufferedImage boardImage;
     private HashMap<String, BufferedImage> pieceImages;
 
-    private int SQUARE_PIXEL_SIZE = 10; // todo: determine
+    private int SQUARE_PIXEL_SIZE = 60; // todo: determine
     private Board board;
 
     public BoardView(Board board) {
@@ -25,7 +24,7 @@ public class BoardView extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // todo: paint board
+        g.drawImage(boardImage, 0, 0, this);
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
                 Piece piece = board.getPiece(Square.squareAt(x + y * 8));
