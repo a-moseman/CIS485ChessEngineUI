@@ -13,21 +13,24 @@ import java.io.IOException;
 public class Main {
     private static final String BOARD_IMAGE_PATH = "Images\\board.png";
     private static final String PIECE_IMAGE_DIRECTORY_PATH = "Images\\Pieces";
-    private static final int PIXEL_WIDTH = 800;
-    private static final int PIXEL_HEIGHT = 800;
+    private static final int PIXEL_WIDTH = 600;
+    private static final int PIXEL_HEIGHT = 600;
 
     public static void main(String[] args) {
+        EngineClient engineClient = new EngineClient();
+        engineClient.start("java -jar Engines\\CIS485ChessEngine-1.0-SNAPSHOT-all.jar");
+
+        JFrame frame = new JFrame("Chess Engine UI");
+
         Board board = new Board();
         BoardView boardView = new BoardView(board);
         loadImages(boardView);
 
         NorthPanel northPanel = new NorthPanel();
-        SouthPanel southPanel = new SouthPanel(board);
+        SouthPanel southPanel = new SouthPanel(frame, board, engineClient);
         EastPanel eastPanel = new EastPanel();
         WestPanel westPanel = new WestPanel();
 
-
-        JFrame frame = new JFrame("Chess Engine UI");
         frame.setUndecorated(true);
         frame.setSize(PIXEL_WIDTH, PIXEL_HEIGHT);
         frame.setLayout(new BorderLayout());

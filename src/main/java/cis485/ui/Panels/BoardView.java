@@ -27,10 +27,14 @@ public class BoardView extends JPanel {
         g.drawImage(boardImage, 0, 0, this);
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
-                Piece piece = board.getPiece(Square.squareAt(x + y * 8));
+                int i = x + y * 8;
+                Square square = Square.squareAt(i);
+                Piece piece = board.getPiece(square);
                 if (piece != Piece.NONE) {
                     BufferedImage image = pieceImage(piece);
-                    g.drawImage(image, x * SQUARE_PIXEL_SIZE, y * SQUARE_PIXEL_SIZE, this);
+                    int px = x * SQUARE_PIXEL_SIZE;
+                    int py = (Math.abs(y - 7)) * SQUARE_PIXEL_SIZE;
+                    g.drawImage(image, px, py, this);
                 }
             }
         }
